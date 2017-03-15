@@ -1,0 +1,37 @@
+@Auther  Aaron J. Ratcliffe  800-795-070
+
+My program first takes in and cheks a user input file name that has the array and qury in it aswell as
+a file name of where they wish to stor the output. it then looks thru the input file and puts the information 
+into two diffrent arrays.  My program then runs insertion sort on one of the arrays and quick sort on the other
+to get them in sorted order. Finoly it calls binary serch to find the first number in the array that is grater then
+the query and setes the answer to the qury equal to its index. Finaly it writes the answer fallowed by the sorted 
+array into the output file the user specifide in the format of one 
+number per line with the answer being at the beginning of the file.
+
+RUN 
+	is the main exucuted file that contains input requests, input validation, file reading, creation of the 
+	unsorted arrays, calls to the SortInt class to sort the arrays, a way to find the answer to the query,
+	and writing to a file.
+SortInt
+	is a class contaning methods to sort an array of intigers in difrent ways, the useInsertionSort method
+	takes in an array and preforms the insertion sort data structer on it, the useQuickSort takes in an array
+	as well as the start index and the end index of what part of the array you wish to srot and then preforms
+	the quick sort data structure on it. the swap method takes in an array and two index values then switches
+	the values stored at the index positions with each other.  The getPivot
+	method takes in an array and the bounds of the area you will be sorting
+	then choses a random index number to be the pivot and retruns it. The useBinarySerch which takes an arra
+	the bounds to serch in and what you are serching for and retruns the index of the first number in the array
+	that is greater then the input query.
+
+IDE Eclipse  compiler 'JavaSE-1.8'
+
+My program should work with all input files in the proper format and it preforms its taskes fairly effetiontly.
+but my program fails because i do not validate the user input for the output file enof and I could have made my
+code easer to read I could have inplimented quick sort much more efitiontly.
+
+Run time
+T(n) = O(run)      T(n) = O(4n^2) = O(n^2) 
+O(run) = 30+8n+O(useQuickSort)+O(useInsertionSort)+O(UseBinerySerch) = (4n^2)+(23log(n)+3nlog(n)+3n+23)+(2log(n))+8n+30 
+O(useQuickSort) = 2f(n/2)+23+3n = 23log(n)+3nlog(n)+3n+23 
+O(useInsertionSort) = 4n^2
+O(useBinerySerch) = 2log(n)
